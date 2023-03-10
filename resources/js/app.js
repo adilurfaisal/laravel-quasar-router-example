@@ -6,13 +6,15 @@ import app from './layout/app.vue';
 
 import {
     Quasar,
-    Notify
+    Notify,
+    Dialog
 } from 'quasar'
 
 import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
-    { path: '/', component: () => import("./layout/form.vue") }
+    { path: '/', component: () => import("./layout/form.vue") },
+    { path: '/table', component: () => import("./layout/table.vue") }
 ]
 
 const router = createRouter({
@@ -23,7 +25,8 @@ const router = createRouter({
 
 createApp(app).use(router).use(Quasar, {
     plugins: {
-        Notify
+        Notify,
+        Dialog
     },
     config: {
         notify: { /* look at QuasarConfOptions from the API card */ }

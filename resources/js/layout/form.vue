@@ -1,5 +1,6 @@
 <template>
     <div class="q-pa-md" style="max-width: 400px">
+        <q-btn :to="{path: '/table'}" label="Table"></q-btn>
         <q-form @submit="onSubmit" @reset="onReset" class="q-gutter-md">
             <q-input
                 filled
@@ -42,12 +43,11 @@
 </template>
 
 <script>
-import { Notify } from "quasar";
+import { Notify, Dialog } from "quasar";
 import { ref } from "vue";
 
 export default {
     setup() {
-
         const name = ref(null);
         const age = ref(null);
         const accept = ref(false);
@@ -74,6 +74,20 @@ export default {
                         message: "Submitted",
                     });
                 }
+
+                Dialog.create({
+                    title: "Alert",
+                    message: "Some message",
+                })
+                    .onOk(() => {
+                        // console.log('OK')
+                    })
+                    .onCancel(() => {
+                        // console.log('Cancel')
+                    })
+                    .onDismiss(() => {
+                        // console.log('I am triggered on both OK and Cancel')
+                    });
             },
 
             onReset() {
