@@ -20,3 +20,8 @@ Route::get('/', function () {
 Route::any('/{any}', function () {
     return view('welcome');
 });
+
+
+Route::any('/{any}/{any}', function () {
+    return view('welcome');
+});

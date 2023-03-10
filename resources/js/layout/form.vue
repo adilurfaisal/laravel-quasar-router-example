@@ -1,5 +1,6 @@
 <template>
     <div class="q-pa-md" style="max-width: 400px">
+        <div class="test-class">Adilur</div>
         <q-btn :to="{path: '/table'}" label="Table"></q-btn>
         <q-form @submit="onSubmit" @reset="onReset" class="q-gutter-md">
             <q-input

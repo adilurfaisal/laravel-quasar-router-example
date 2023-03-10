@@ -12,7 +12,7 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet" type="text/css">
-    @vite('resources/css/quasar.prod.css')
+    <link href="https://cdn.jsdelivr.net/npm/quasar@2.11.7/dist/quasar.prod.css" rel="stylesheet" type="text/css">
 
 </head>
 
