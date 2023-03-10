@@ -4,7 +4,10 @@ import { createApp } from 'vue';
 
 import app from './layout/app.vue';
 
-import { Quasar } from 'quasar'
+import {
+    Quasar,
+    Notify
+} from 'quasar'
 
 import { createRouter, createWebHistory } from 'vue-router';
 
@@ -18,4 +21,11 @@ const router = createRouter({
 })
 
 
-createApp(app).use(router).use(Quasar).mount("#app");
+createApp(app).use(router).use(Quasar, {
+    plugins: {
+        Notify
+    },
+    config: {
+        notify: { /* look at QuasarConfOptions from the API card */ }
+    }
+}).mount("#app");
